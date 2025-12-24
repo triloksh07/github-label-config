@@ -1,3 +1,5 @@
+---
+
 labels:
   - name: bug
     color: d73a4a
@@ -25,7 +27,7 @@ labels:
 
   - name: question
     color: d876e3
-    description: Clarification or inquiry, further information is requested
+    description: Clarification or inquiry; further information is requested
 
   - name: chore
     color: ededed
@@ -55,19 +57,19 @@ labels:
     color: e4e669
     description: Not a valid bug or request
 
-  - name: priority: critical
+  - name: "priority: critical"
     color: b60205
     description: Highest urgency; must be addressed immediately
 
-  - name: priority: high
+  - name: "priority: high"
     color: b60205
     description: Must be addressed urgently
 
-  - name: priority: medium
+  - name: "priority: medium"
     color: fbca04
     description: Important but not urgent
 
-  - name: priority: low
+  - name: "priority: low"
     color: 0e8a16
     description: Nice-to-have, can wait
 
