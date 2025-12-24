@@ -1,3 +1,6 @@
+Here’s the **expanded README draft with a Troubleshooting Commands section**, including the `sed` command log we used:
+
+---
 
 # 🔖 GitHub Label Sync
 
@@ -99,6 +102,31 @@ Before committing changes:
 
 ---
 
+## 🛠 Troubleshooting Commands
+
+### Lint YAML
+```bash
+yamllint config/labels.yml
+```
+
+### Local Workflow Test
+```bash
+act push -W .github/workflows/label-sync.yml
+```
+
+### Quote Hex Color Values
+If YAML misinterprets hex codes, use this `sed` one‑liner to wrap all `color:` values in quotes:
+
+```bash
+sed -i 's/^\(\s*color:\s*\)\([0-9a-fA-F]\+\)$/\1"\2"/' config/labels.yml
+```
+
+**Example:**
+- Before → `color: d73a4a`  
+- After → `color: "d73a4a"`
+
+---
+
 ## 📚 Lessons Learned
 - YAML parsers can misinterpret unquoted values (especially hex codes with leading zeros).
 - GitHub Actions require explicit permissions for label management.
@@ -113,3 +141,7 @@ Before committing changes:
 - Expand label taxonomy as the project grows (e.g., `UX`, `infra`, `release`).
 
 ---
+
+👉 This README now includes the **sed command log** and a full troubleshooting section, so contributors have a quick reference for fixing common issues.  
+
+Would you like me to also add a **step‑by‑step contributor guide** (like “How to add a new label safely”) so it’s beginner‑friendly?
