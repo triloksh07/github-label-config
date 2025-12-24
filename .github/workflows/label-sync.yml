@@ -1,15 +1,17 @@
-# .github/workflows/label-sync.yml
 name: Sync GitHub Labels
 
 on:
   push:
     paths:
-      - 'config/labels.yml'   # only run when labels.yml changes
+      - 'config/labels.yml'
       - '.github/workflows/label-sync.yml'
 
 jobs:
   sync-labels:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow pushing changes if needed
+      issues: write     # allow creating/updating labels
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
