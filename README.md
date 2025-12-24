@@ -1,4 +1,3 @@
-Here’s the **expanded README draft with a Troubleshooting Commands section**, including the `sed` command log we used:
 
 ---
 
@@ -142,6 +141,3 @@ sed -i 's/^\(\s*color:\s*\)\([0-9a-fA-F]\+\)$/\1"\2"/' config/labels.yml
 
 ---
 
-👉 This README now includes the **sed command log** and a full troubleshooting section, so contributors have a quick reference for fixing common issues.  
-
-Would you like me to also add a **step‑by‑step contributor guide** (like “How to add a new label safely”) so it’s beginner‑friendly?
