@@ -25,7 +25,7 @@ labels:
 
   - name: question
     color: d876e3
-    description: Clarification or inquiry: further information is requested
+    description: Clarification or inquiry, further information is requested
 
   - name: chore
     color: ededed
